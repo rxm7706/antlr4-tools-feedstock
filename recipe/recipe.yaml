@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: antlr4-tools
-  version: 0.2.2
+  version: "0.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -27,7 +28,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     # setup.py requires install-jdk to pass pip check, added install-jdk to requirements run section.
     - install-jdk
     - openjdk
@@ -37,6 +38,7 @@ tests:
       imports:
         - antlr4_tool_runner
       python_version: ${{ python_min }}.*
+      pip_check: true
   - requirements:
       run:
         - pip
