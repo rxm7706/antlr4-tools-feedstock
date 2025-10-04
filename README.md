@@ -3,7 +3,7 @@ About antlr4-tools-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/antlr4-tools-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.antlr.org
+Home: http://www.antlr.org/
 
 Package license: MIT
 
